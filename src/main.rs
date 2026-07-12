@@ -1,13 +1,23 @@
-use std::fs;
+use std::fs::{self, File};
+use std::io::BufReader;
 use std::net::{IpAddr, Ipv4Addr, SocketAddr};
 use std::path::PathBuf;
 
+use anyhow::{Context, Result};
 use clap::{Parser, Subcommand};
+use cv_website::render::render;
+use cv_website::resume::Resume;
 use tiny_http::{Header, Response, Server};
 
 #[derive(Parser)]
 #[command(about = "Generate the CV website, or serve it locally for testing")]
 struct Cli {
+    #[arg(long, default_value_t = String::from("templates"))]
+    template_directory: String,
+
+    #[arg(short, long, default_value = "./resume.yml")]
+    input: PathBuf,
+
     #[command(subcommand)]
     command: Command,
 }
@@ -31,22 +41,6 @@ enum Command {
     },
 }
 
-fn render() -> &'static str {
-    r#"<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello world</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Hello world</h1>
-</body>
-</html>
-"#
-}
-
 fn content_type(path: &str) -> &'static str {
     match path.rsplit('.').next() {
         Some("html") => "text/html; charset=utf-8",
@@ -63,14 +57,14 @@ fn header(content_type: &str) -> Header {
     Header::from_bytes(&b"Content-Type"[..], content_type.as_bytes()).unwrap()
 }
 
-fn serve(ip: IpAddr, port: u16) {
+fn serve(ip: IpAddr, port: u16, content: &str) {
     let addr = SocketAddr::new(ip, port);
     let server = Server::http(addr).unwrap();
     eprintln!("Serving on http://{addr}");
     for request in server.incoming_requests() {
         let url = request.url();
         let response = if url == "/" || url == "/index.html" {
-            Response::from_string(render()).with_header(header("text/html; charset=utf-8"))
+            Response::from_string(content).with_header(header("text/html; charset=utf-8"))
         } else if url.contains("..") {
             Response::from_string("Not found").with_status_code(404)
         } else {
@@ -91,12 +85,18 @@ fn serve(ip: IpAddr, port: u16) {
     }
 }
 
-fn main() {
-    match Cli::parse().command {
+fn main() -> Result<()> {
+    let parsed = Cli::parse();
+    let input_file = File::open(parsed.input).context("Failed to open input file")?;
+    let reader = BufReader::new(input_file);
+    let resume: Resume = yaml_serde::from_reader(reader).context("Failed to parse input YAML")?;
+    let rendered = render(&format!("{}/*.html", parsed.template_directory), &resume)?;
+    match parsed.command {
         Command::Generate { output } => match output {
-            Some(path) => fs::write(path, render()).unwrap(),
-            None => print!("{}", render()),
+            Some(path) => fs::write(path, rendered).unwrap(),
+            None => print!("{}", rendered),
         },
-        Command::Serve { ip, port } => serve(ip, port),
+        Command::Serve { ip, port } => serve(ip, port, &rendered),
     }
+    Ok(())
 }
