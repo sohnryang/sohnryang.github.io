@@ -2,7 +2,7 @@ use std::fmt;
 use std::str::FromStr;
 
 use chrono::Month;
-use serde::{Deserialize, Deserializer, Serialize, de};
+use serde::{Deserialize, Deserializer, Serialize, Serializer, de};
 
 /// A year-month pair.
 ///
@@ -96,7 +96,7 @@ impl FromStr for Date {
 /// let career_range = CareerRange::Ongoing(Date { year:  2026, month: Month::July });
 /// assert_eq!(career_range.to_string(), "Jul 2026 - Ongoing");
 /// ```
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CareerRange {
     Single(Date),
     Range(Date, Date),
@@ -153,6 +153,18 @@ impl FromStr for CareerRange {
                 }
             }
         }
+    }
+}
+
+impl Serialize for CareerRange {
+    /// Serializes to the `Display` representation, so templates and other
+    /// consumers see e.g. `"Apr 2025 - Jan 2027"` rather than the structural
+    /// enum encoding.
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: Serializer,
+    {
+        serializer.collect_str(self)
     }
 }
 
