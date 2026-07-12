@@ -79,19 +79,18 @@ sections:
         range: Oct 2025
         links: []
       - title: National Science & Technology Scholarship
-        subtitle: ""
-        description: |
-          Endorsed by the university in the 3rd year.
+        subtitle: Endorsed by the university in the 3rd year.
+        description: ""
         range: May 2024
         links: []
       - title: POSTECH CSE Global Leadership Program 2024 Spring
-        subtitle: ""
+        subtitle: Selected as one of the top 6 junior students.
         description: |
           A scholarship program for high-performing POSTECH CSE students.
         range: Mar 2024
         links: []
       - title: POSTECH CSE Global Leadership Program 2023 Fall
-        subtitle: ""
+        subtitle: Selected as one of the top 14 sophomore students.
         description: |
           A scholarship program for high-performing POSTECH CSE students.
         range: Sep 2023
@@ -132,36 +131,20 @@ sections:
         range: Dec 2025
         links: []
       - title: Craftsman Information Processing
-        subtitle: ""
-        description: |
-          Issued by HRD Korea.
+        subtitle: Issued by HRD Korea.
+        description: ""
         range: Apr 2024
         links: []
       - title: TOEFL
-        subtitle: ""
-        description: |
-          Scored 109 / 120. Issued by ETS.
+        subtitle: Scored 109 / 120. Issued by ETS.
+        description: ""
         range: Jul 2023
         links: []
   - name: Personal Projects
     items:
-      - title: stapl
-        subtitle: Simple, Type-Annotated Programming Language
-        description: |
-          A compiler for imperative programming language with type annotations.
-
-          - Written in C++ and based on LLVM.
-
-          Striving to follow best practices of modern C++ and software development:
-
-          - Modularity, unit testing, documentation, etc.
-        range: Jan 2024
-        links: []
       - title: GPU-accelerated Ray Tracer
-        subtitle: ""
+        subtitle: Developed a ray tracer that can simulate various materials.
         description: |
-          Developed a ray tracer that can simulate various materials.
-
           - Started as a term-project for Computer Graphics course.
           - Written in Vulkan compute shader, more than 10x speedup compared to CPU based ray tracer.
           - Learned internals and low-level details of modern graphics pipeline.
@@ -171,7 +154,7 @@ sections:
           - Support for metallic, dielectric, and diffuse materials.
           - Simulation for hypothetical portal materials.
           - Utilization of modern technology stack, such as Vulkan and dynamic rendering.
-        range: Jan 2024
+        range: May 2024 - Jun 2024
         links: []
       - title: TML (Tiny ML) Compiler
         subtitle: ""
@@ -186,13 +169,13 @@ sections:
 
           - SSA-like intermediate representation.
           - Support for closures, higher-order functions, recursive datatypes and pattern matching.
-        range: Jan 2024
-        links: []
+        range: May 2024
+        links:
+          - name: GitHub
+            url: https://github.com/sohnryang/csed321/tree/main/hw7
       - title: PintOS Implementation
-        subtitle: ""
+        subtitle: Implementing PintOS, an educational operating system.
         description: |
-          Implementing PintOS, an educational operating system.
-
           - Written in C and x86 assembly.
           - Worked on threading, userspace programs, and virtual memory system.
 
@@ -200,5 +183,21 @@ sections:
 
           - Virtual memory system similar to object-based reverse mapping of Linux.
           - Reduced memory usage by reusing already-loaded code sections.
-        range: Jan 2024
-        links: []
+        range: Sep 2023 - Dec 2023
+        links:
+          - name: GitHub
+            url: https://github.com/sohnryang/csed312
+      - title: stapl
+        subtitle: Simple, Type-Annotated Programming Language
+        description: |
+          A compiler for imperative programming language with type annotations.
+
+          - Written in C++ and based on LLVM.
+
+          Striving to follow best practices of modern C++ and software development:
+
+          - Modularity, unit testing, documentation, etc.
+        range: Dec 2022
+        links:
+          - name: GitHub
+            url: https://github.com/sohnryang/stapl
