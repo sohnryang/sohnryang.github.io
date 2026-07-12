@@ -154,7 +154,9 @@ sections:
           - Simulation for hypothetical portal materials.
           - Utilization of modern technology stack, such as Vulkan and dynamic rendering.
         range: May 2024 - Jun 2024
-        links: []
+        links:
+          - name: GitHub
+            url: https://github.com/sohnryang/csed451-term-project
       - title: TML (Tiny ML) Compiler
         subtitle: ""
         description: |
