@@ -1,8 +1,12 @@
 links:
-  - name: GitHub
-    url: https://github.com/sohnryang
   - name: Email
     url: mailto:ryangsohn@postech.ac.kr
+  - name: GitHub
+    url: https://github.com/sohnryang
+  - name: Twitter
+    url: https://twitter.com/curling_grad
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/ryang-sohn/
 sections:
   - name: Education
     items:
@@ -16,7 +20,9 @@ sections:
           - PLUS (POSTECH Laboratory for UNIX Security): Hacking Club.
           - MARCUS: Math & Academic Presentation Club.
         range: Feb 2022 - Ongoing
-        links: []
+        links:
+          - name: Course Reviews
+            link: https://github.com/sohnryang/survival-at-postech
   - name: Work Experience
     items:
       - title: Seoul National University, Graduate School of Data Science
