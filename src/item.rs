@@ -2,7 +2,7 @@ use std::fmt;
 use std::str::FromStr;
 
 use chrono::Month;
-use serde::{Deserialize, Deserializer, de};
+use serde::{Deserialize, Deserializer, Serialize, de};
 
 /// A year-month pair.
 ///
@@ -20,7 +20,7 @@ use serde::{Deserialize, Deserializer, de};
 /// let date = Date { year: 1999, month: Month::December };
 /// assert_eq!(date.to_string(), "Dec 1999");
 /// ```
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Deserialize)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Deserialize, Serialize)]
 pub struct Date {
     pub year: i32,
     pub month: Month,
@@ -96,7 +96,7 @@ impl FromStr for Date {
 /// let career_range = CareerRange::Ongoing(Date { year:  2026, month: Month::July });
 /// assert_eq!(career_range.to_string(), "Jul 2026 - Ongoing");
 /// ```
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize)]
 pub enum CareerRange {
     Single(Date),
     Range(Date, Date),
@@ -166,13 +166,13 @@ impl<'de> Deserialize<'de> for CareerRange {
     }
 }
 
-#[derive(Clone, Debug, PartialEq, Eq, Deserialize)]
+#[derive(Clone, Debug, PartialEq, Eq, Deserialize, Serialize)]
 pub struct Link {
     pub name: String,
     pub url: String,
 }
 
-#[derive(Clone, Debug, PartialEq, Eq, Deserialize)]
+#[derive(Clone, Debug, PartialEq, Eq, Deserialize, Serialize)]
 pub struct CareerItem {
     pub title: String,
     pub subtitle: String,
