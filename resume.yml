@@ -125,9 +125,8 @@ sections:
   - name: Certifications
     items:
       - title: Industrial Engineer Information Processing
-        subtitle: ""
-        description: |
-          Issued by HRD Korea.
+        subtitle: Issued by HRD Korea.
+        description: ""
         range: Dec 2025
         links: []
       - title: Craftsman Information Processing
