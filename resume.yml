@@ -22,7 +22,7 @@ sections:
         range: Feb 2022 - Ongoing
         links:
           - name: Course Reviews
-            link: https://github.com/sohnryang/survival-at-postech
+            url: https://github.com/sohnryang/survival-at-postech
   - name: Work Experience
     items:
       - title: Seoul National University, Graduate School of Data Science
