@@ -11,7 +11,7 @@ pub struct Section {
 #[derive(Clone, Debug, PartialEq, Eq, Deserialize, Serialize)]
 pub struct Resume {
     pub links: Vec<Link>,
-    pub sections: Section,
+    pub sections: Vec<Section>,
 }
 
 #[cfg(test)]
@@ -29,25 +29,25 @@ links:
   - name: Email
     url: mailto:loop.infinitely@gmail.com
 sections:
-  name: Experience
-  items:
-    - title: Software Engineer
-      subtitle: Acme Corp
-      description: Wrote a lot of Rust.
-      range: Apr 2025 - Jan 2027
-      links:
-        - name: Project
-          url: https://example.com
-    - title: Student
-      subtitle: Some University
-      description: Studied things.
-      range: Jul 2026 - Ongoing
-      links: []
-    - title: Intern
-      subtitle: Another Company
-      description: A summer internship.
-      range: Aug 2024
-      links: []
+  - name: Experience
+    items:
+      - title: Software Engineer
+        subtitle: Acme Corp
+        description: Wrote a lot of Rust.
+        range: Apr 2025 - Jan 2027
+        links:
+          - name: Project
+            url: https://example.com
+      - title: Student
+        subtitle: Some University
+        description: Studied things.
+        range: Jul 2026 - Ongoing
+        links: []
+      - title: Intern
+        subtitle: Another Company
+        description: A summer internship.
+        range: Aug 2024
+        links: []
 "#;
 
         let resume: Resume = yaml_serde::from_str(yaml).expect("resume should deserialize");
@@ -63,7 +63,7 @@ sections:
                     url: "mailto:loop.infinitely@gmail.com".to_string(),
                 },
             ],
-            sections: Section {
+            sections: vec![Section {
                 name: "Experience".to_string(),
                 items: vec![
                     CareerItem {
@@ -106,7 +106,7 @@ sections:
                         links: vec![],
                     },
                 ],
-            },
+            }],
         };
 
         assert_eq!(resume, expected);
