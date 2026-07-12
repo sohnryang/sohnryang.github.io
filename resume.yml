@@ -1,0 +1,204 @@
+links:
+  - name: GitHub
+    url: https://github.com/sohnryang
+  - name: Email
+    url: mailto:ryangsohn@postech.ac.kr
+sections:
+  - name: Education
+    items:
+      - title: POSTECH (Pohang University of Science and Technology)
+        subtitle: Computer Science and Engineering, double major in Mathematics
+        description: |
+          GPA: 4.16 / 4.30
+
+          Activities and Societies:
+
+          - PLUS (POSTECH Laboratory for UNIX Security): Hacking Club.
+          - MARCUS: Math & Academic Presentation Club.
+        range: Feb 2022 - Ongoing
+        links: []
+  - name: Work Experience
+    items:
+      - title: Seoul National University, Graduate School of Data Science
+        subtitle: Internship at Computing Optimization and Data-driven Exploration lab
+        description: |
+          Skills used: C++, LLVM, RISC-V
+
+          Worked on:
+
+          - LLVM auto-vectorization for scalable vector architectures. (RISC-V V extension, ARM SVE)
+          - Enhancements for LLVM loop vectorization. (up to ~15x speedups in synthetic benchmarks)
+        range: Sep 2024 - Apr 2025
+        links: []
+      - title: Theori
+        subtitle: ChainLight WARD (Web3 Automated Risk Detection) Intern Researcher
+        description: |
+          Skills used: Rust, Static Program Analysis, Solidity
+
+          Worked on security-focused static analysis engine for web3 applications.
+
+          Areas of interest:
+
+          - Translating Solidity code to intermediate representation suitable for data-flow analysis.
+          - Simplified memory model of Ethereum Virtual Machine.
+          - Vulnerability detection of smart contracts using data-flow analysis.
+        range: Jan 2024 - Jul 2024
+        links: []
+      - title: PoApper Inc.
+        subtitle: Part-time Backend Engineer
+        description: |
+          Skills used: Python, Go
+
+          Developed `fights.ai`, an environment for competitive game-playing agents.
+
+          Areas of interest:
+
+          - Developer-friendly Python API for game-playing agents.
+          - Server infrastructure based on message queue for competitive gameplay.
+          - Isolated per-agent environment for multiplayer games.
+        range: Jan 2022 - Mar 2023
+        links: []
+  - name: Awards and Honors
+    items:
+      - title: Republic of Korea Air Force Cybersecurity Competition
+        subtitle: Finalist
+        description: |
+          Internal CTF event of ROKAF. Finished finals as 9th place.
+        range: Jun 2026
+        links: []
+      - title: MLSys 2026 Google Competition
+        subtitle: "3rd Prize (Track A: Systems Engineering)"
+        description: |
+          A challenge focusing on computation graph optimization.
+        range: May 2026
+        links: []
+      - title: Whitehat 2025 CTF
+        subtitle: Finalist (Soldier Division)
+        description: |
+          Qualified as 7th place, finished finals as 6th place.
+        range: Oct 2025
+        links: []
+      - title: National Science & Technology Scholarship
+        subtitle: ""
+        description: |
+          Endorsed by the university in the 3rd year.
+        range: May 2024
+        links: []
+      - title: POSTECH CSE Global Leadership Program 2024 Spring
+        subtitle: ""
+        description: |
+          A scholarship program for high-performing POSTECH CSE students.
+        range: Mar 2024
+        links: []
+      - title: POSTECH CSE Global Leadership Program 2023 Fall
+        subtitle: ""
+        description: |
+          A scholarship program for high-performing POSTECH CSE students.
+        range: Sep 2023
+        links: []
+      - title: Crypto Contest 2022
+        subtitle: 2nd Prize
+        description: |
+          Cryptanalysis competition hosted by South Korean Ministry of Defense.
+
+          Contributions:
+
+          - Multi-threaded PoC code for attacking weak Bitcoin-like wallet scheme.
+          - Security analysis of Sponge-based hash function.
+        range: Oct 2022
+        links: []
+      - title: POSTECH Programming Contest 2022
+        subtitle: Freshman Prize
+        description: |
+          Coding competition for POSTECH students.
+
+          Participated as Team 대줴패, ranked first among freshman students.
+        range: Sep 2022
+        links: []
+      - title: Artificial Intelligence Accelerator Design Competition
+        subtitle: Encouragement Prize
+        description: |
+          Competition to design FPGA-based accelerator for neural networks.
+
+          Worked on: 8-bit quantization algorithm of YOLOv3 neural network.
+        range: Jun 2022
+        links: []
+  - name: Certifications
+    items:
+      - title: Industrial Engineer Information Processing
+        subtitle: ""
+        description: |
+          Issued by HRD Korea.
+        range: Dec 2025
+        links: []
+      - title: Craftsman Information Processing
+        subtitle: ""
+        description: |
+          Issued by HRD Korea.
+        range: Apr 2024
+        links: []
+      - title: TOEFL
+        subtitle: ""
+        description: |
+          Scored 109 / 120. Issued by ETS.
+        range: Jul 2023
+        links: []
+  - name: Personal Projects
+    items:
+      - title: stapl
+        subtitle: Simple, Type-Annotated Programming Language
+        description: |
+          A compiler for imperative programming language with type annotations.
+
+          - Written in C++ and based on LLVM.
+
+          Striving to follow best practices of modern C++ and software development:
+
+          - Modularity, unit testing, documentation, etc.
+        range: Jan 2024
+        links: []
+      - title: GPU-accelerated Ray Tracer
+        subtitle: ""
+        description: |
+          Developed a ray tracer that can simulate various materials.
+
+          - Started as a term-project for Computer Graphics course.
+          - Written in Vulkan compute shader, more than 10x speedup compared to CPU based ray tracer.
+          - Learned internals and low-level details of modern graphics pipeline.
+
+          Notable features:
+
+          - Support for metallic, dielectric, and diffuse materials.
+          - Simulation for hypothetical portal materials.
+          - Utilization of modern technology stack, such as Vulkan and dynamic rendering.
+        range: Jan 2024
+        links: []
+      - title: TML (Tiny ML) Compiler
+        subtitle: ""
+        description: |
+          The final programming assignment of Programming Language course.
+
+          - Compiles Tiny ML, a subset of Standard ML, into machine code for virtual machine `Mach`.
+          - Written in OCaml.
+          - Learned internals of compilers for functional languages, and various implementation strategies.
+
+          Notable features:
+
+          - SSA-like intermediate representation.
+          - Support for closures, higher-order functions, recursive datatypes and pattern matching.
+        range: Jan 2024
+        links: []
+      - title: PintOS Implementation
+        subtitle: ""
+        description: |
+          Implementing PintOS, an educational operating system.
+
+          - Written in C and x86 assembly.
+          - Worked on threading, userspace programs, and virtual memory system.
+
+          Notable features:
+
+          - Virtual memory system similar to object-based reverse mapping of Linux.
+          - Reduced memory usage by reusing already-loaded code sections.
+        range: Jan 2024
+        links: []
