@@ -7,7 +7,7 @@ edition = "2024"
 anyhow = "1.0.103"
 chrono = { version = "0.4.42", features = ["serde"] }
 clap = { version = "4.5.51", features = ["derive"] }
-pulldown-cmark = { version = "0.13.4", default-features = false }
+pulldown-cmark = { version = "0.13.4", default-features = false, features = ["html"] }
 serde = { version = "1.0.228", features = ["derive"] }
 tera = { version = "2.0.0", features = ["glob_fs"] }
 tiny_http = "0.12.0"
