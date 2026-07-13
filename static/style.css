@@ -75,6 +75,11 @@ a {
     font-size: 0.85em;
 }
 
+.item__description>code {
+    font-family: "Cascadia Code";
+    font-size: 0.85em;
+}
+
 .item__description ul {
     list-style-type: "- ";
 }
