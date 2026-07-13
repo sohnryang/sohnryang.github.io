@@ -25,3 +25,8 @@ body {
 .item__range {
     white-space: nowrap;
 }
+
+.item__subtitle {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
