@@ -125,7 +125,7 @@ sections:
       - title: AI Accelerator Design Competition
         subtitle: Encouragement Prize
         description: |
-          Competition to design FPGA-based accelerator for neural networks.
+          Competition to design an FPGA-based accelerator for neural networks.
 
           Worked on: 8-bit quantization algorithm of YOLOv3 neural network.
         range: Jun 2022
