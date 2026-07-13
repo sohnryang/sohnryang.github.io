@@ -149,6 +149,13 @@ sections:
         links: []
   - name: Personal Projects
     items:
+      - title: Qwen2 Inference from Scratch
+        subtitle: Implemented GPU-accelerated inference for the model.
+        description: ""
+        range: Oct 2025 - Jan 2026
+        links:
+          - name: GitHub
+            url: https://github.com/sohnryang/qwen2-from-scratch
       - title: GPU-accelerated Ray Tracer
         subtitle: Developed a ray tracer that can simulate various materials.
         description: |
