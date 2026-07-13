@@ -16,7 +16,9 @@
                         {% for link in item.links %}
                             <a class="item__link" href="{{ link.url }}">[{{ link.name }}]</a>
                         {% endfor %}
-                        <br>
+                        {% if item.links | length > 0 %}
+                            <br>
+                        {% endif %}
                         <span class="item__subtitle">{{ item.subtitle }}</span>
                     </div>
                 </div>
