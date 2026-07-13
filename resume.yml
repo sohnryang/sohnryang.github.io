@@ -164,10 +164,8 @@ sections:
           - name: GitHub
             url: https://github.com/sohnryang/csed451-term-project
       - title: TML (Tiny ML) Compiler
-        subtitle: ""
+        subtitle: The final programming assignment of Programming Language course.
         description: |
-          The final programming assignment of Programming Language course.
-
           - Compiles Tiny ML, a subset of Standard ML, into machine code for virtual machine `Mach`.
           - Written in OCaml.
           - Learned internals of compilers for functional languages, and various implementation strategies.
