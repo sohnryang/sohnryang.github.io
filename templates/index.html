@@ -13,13 +13,13 @@
                     <h3 class="item__title">{{ item.title }}</h3>
                     <sup class="item__range">{{ item.range }}</sup>
                     <div class="item__meta">
-                        {% for link in item.links %}
-                            <a class="item__link" href="{{ link.url }}">[{{ link.name }}]</a>
-                        {% endfor %}
+                        <span class="item__subtitle">{{ item.subtitle }}</span>
                         {% if item.links | length > 0 %}
                             <br>
                         {% endif %}
-                        <span class="item__subtitle">{{ item.subtitle }}</span>
+                        {% for link in item.links %}
+                            <a class="item__link" href="{{ link.url }}">[{{ link.name }}]</a>
+                        {% endfor %}
                     </div>
                 </div>
             {% endfor %}
