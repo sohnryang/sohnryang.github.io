@@ -64,6 +64,19 @@ a {
     display: block;
 }
 
+.item__description {
+    display: none;
+    font-size: 0.85em;
+}
+
+.item__description ul {
+    list-style-type: "- ";
+}
+
+.section--expanded .item__description {
+    display: block;
+}
+
 .section-toggle {
     display: inline-block;
     margin-bottom: 2rem;
