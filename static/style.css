@@ -8,3 +8,7 @@ body {
 .item__title {
     display: inline;
 }
+
+.item__range {
+    white-space: nowrap;
+}
