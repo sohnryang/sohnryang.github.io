@@ -10,7 +10,7 @@ links:
 sections:
   - name: Education
     items:
-      - title: POSTECH (Pohang University of Science and Technology)
+      - title: Pohang University of Science and Technology
         subtitle: Computer Science and Engineering, double major in Mathematics
         description: |
           GPA: 4.16 / 4.30
@@ -25,7 +25,7 @@ sections:
             url: https://github.com/sohnryang/survival-at-postech
   - name: Work Experience
     items:
-      - title: Seoul National University, Graduate School of Data Science
+      - title: Seoul National University
         subtitle: Internship at Computing Optimization and Data-driven Exploration lab
         description: |
           Skills used: C++, LLVM, RISC-V
