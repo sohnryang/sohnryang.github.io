@@ -56,6 +56,19 @@ a {
     margin-bottom: 2rem;
 }
 
+.item--extra {
+    display: none;
+}
+
+.section--expanded .item--extra {
+    display: block;
+}
+
+.section-toggle {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
 .item__title {
     display: inline;
     font-weight: normal;

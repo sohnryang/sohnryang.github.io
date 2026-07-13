@@ -6,10 +6,10 @@
 {% endblock header %}
 {% block content %}
     {% for section in resume.sections %}
-        <section>
+        <section class="section">
             <h2 class="section-title">{{ section.name }}</h2>
             {% for item in section.items %}
-                <div class="item">
+                <div class="item{% if loop.index0 >= 3 %} item--extra{% endif %}">
                     <h3 class="item__title">{{ item.title }}</h3>
                     <sup class="item__range">{{ item.range }}</sup>
                     <div class="item__meta">
@@ -23,6 +23,9 @@
                     </div>
                 </div>
             {% endfor %}
+            {% if section.items | length > 3 %}
+                <a class="section-toggle" href="#">[+ show more]</a>
+            {% endif %}
         </section>
     {% endfor %}
 {% endblock content %}
