@@ -1,8 +1,12 @@
 body {
     font-family: system-ui, sans-serif;
-    max-width: 40rem;
+    max-width: 50rem;
     margin: 4rem auto;
     padding: 0 1rem;
+}
+
+.item {
+    margin-bottom: 1.5rem;
 }
 
 .item__title {
