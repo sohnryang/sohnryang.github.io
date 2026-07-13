@@ -1,8 +1,47 @@
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #101010;
+    --link: #0000ee;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #101010;
+        --fg: #e6e6e6;
+        --link: #ffd700;
+    }
+}
+
+:root[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #101010;
+    --link: #0000ee;
+}
+
+:root[data-theme="dark"] {
+    --bg: #101010;
+    --fg: #e6e6e6;
+    --link: #ffd700;
+}
+
 body {
     font-family: "Cascadia Code";
     max-width: 40rem;
     margin: 4rem auto;
     padding: 0 1rem;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+a {
+    color: var(--link);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
 }
 
 .name {

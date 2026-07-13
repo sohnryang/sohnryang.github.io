@@ -8,8 +8,10 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+		<script src="theme-init.js"></script>
 	</head>
 	<body>
+		<a id="theme-toggle" class="theme-toggle" href="#">[dark mode]</a>
 		<header>
 			<h1 clas="name">Ryang Sohn</h1>
 			{% block header %}
@@ -19,5 +21,6 @@
 			{% block content %}
 			{% endblock content %}
 		</article>
+		<script src="theme-toggle.js"></script>
 	</body>
 </html>
