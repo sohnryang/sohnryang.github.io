@@ -66,7 +66,7 @@ sections:
         links: []
   - name: Awards and Honors
     items:
-      - title: Republic of Korea Air Force Cybersecurity Competition
+      - title: ROKAF Cybersecurity Competition
         subtitle: Finalist
         description: |
           Internal CTF event of ROKAF. Finished finals as 9th place.
@@ -122,7 +122,7 @@ sections:
           Participated as Team 대줴패, ranked first among freshman students.
         range: Sep 2022
         links: []
-      - title: Artificial Intelligence Accelerator Design Competition
+      - title: AI Accelerator Design Competition
         subtitle: Encouragement Prize
         description: |
           Competition to design FPGA-based accelerator for neural networks.
