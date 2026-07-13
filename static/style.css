@@ -48,6 +48,12 @@ a {
     font-size: 1.5em;
 }
 
+.section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
 .section-title {
     font-size: 1.3em;
 }
@@ -78,10 +84,7 @@ a {
 }
 
 .section-toggle {
-    display: block;
-    width: fit-content;
-    margin-top: -1rem;
-    margin-bottom: 2rem;
+    font-size: 0.8em;
 }
 
 .item__title {
