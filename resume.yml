@@ -77,7 +77,9 @@ sections:
         description: |
           A challenge focusing on computation graph optimization.
         range: May 2026
-        links: []
+        links:
+          - name: GitHub
+            url: https://github.com/sohnryang/mlsys2026-graph-scheduling
       - title: Whitehat 2025 CTF
         subtitle: Finalist (Soldier Division)
         description: |
