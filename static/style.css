@@ -3,18 +3,21 @@
     --bg: #101010;
     --fg: #e6e6e6;
     --link: #ffd700;
+    --code-bg: #2a2a2a;
 }
 
 :root[data-theme="light"] {
     --bg: #ffffff;
     --fg: #101010;
     --link: #0000ee;
+    --code-bg: #e6e6e6;
 }
 
 :root[data-theme="dark"] {
     --bg: #101010;
     --fg: #e6e6e6;
     --link: #ffd700;
+    --code-bg: #2a2a2a;
 }
 
 body {
@@ -67,9 +70,11 @@ a {
     font-size: 0.85em;
 }
 
-.item__description>code {
+.item__description code {
     font-family: "Cascadia Code";
     font-size: 0.85em;
+    background: var(--code-bg);
+    padding: 0.1em 0.3em;
 }
 
 .item__description ul {
