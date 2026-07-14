@@ -55,6 +55,9 @@ a {
 
 .item {
     margin-bottom: 2rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid;
+    border-color: var(--fg);
 }
 
 .item--extra {
