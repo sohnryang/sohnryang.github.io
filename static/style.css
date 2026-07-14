@@ -21,7 +21,7 @@
 }
 
 body {
-    font-family: "Cascadia Code";
+    font-family: "Cascadia Code", ui-monospace, monospace;
     max-width: 40rem;
     margin: 4rem auto;
     padding: 0 1rem;
@@ -71,7 +71,7 @@ a {
 }
 
 .item__description code {
-    font-family: "Cascadia Code";
+    font-family: "Cascadia Code", ui-monospace, monospace;
     font-size: 0.85em;
     background: var(--code-bg);
     padding: 0.1em 0.3em;
