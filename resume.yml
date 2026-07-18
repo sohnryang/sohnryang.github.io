@@ -151,7 +151,16 @@ sections:
     items:
       - title: Qwen2 Inference from Scratch
         subtitle: Implemented GPU-accelerated inference for the model.
-        description: ""
+        description: |
+          - Written in CUDA and C++.
+          - Uses minimal dependencies.
+          - Learned internals of transformer-based large language models and CUDA kernel optimization.
+
+          Notable features:
+
+          - Command line based chat interface with token streaming.
+          - Basic optimizations such as KV caching and async memory copy.
+          - Optimized for single-batch inference by utilizing [FastGEMV](https://github.com/wangsiping97/FastGEMV) kernel.
         range: Oct 2025 - Jan 2026
         links:
           - name: GitHub
